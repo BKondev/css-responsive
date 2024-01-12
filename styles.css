@@ -1,0 +1,189 @@
+@font-face {
+    font-family: robotic;
+    src:url(cubic.ttf);
+
+}
+@font-face {
+    font-family: inlanders;
+    src: url(Inlanders\ Demo.otf);
+}
+header{
+    display:grid;
+    grid-template:5rem / 1fr 1fr;
+    background-color:#2b2b2b;
+}
+.logo-text{
+    justify-self:start;
+    grid-column:1;
+    align-self:center;
+    margin-left:1em;
+    font-family:"robotic";
+    background:-webkit-linear-gradient(135deg ,rgb(237, 9, 81), rgb(255, 133, 52),rgb(196, 0, 210));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+    letter-spacing:0px;
+    font-size:2.1em;
+    
+}
+.logo-text:hover{
+    font-size:2.3em;
+    transition:font-size 0.25s ease-in;
+}
+.nav{
+    justify-self:end;
+    grid-column:2;
+    list-style-type: none;
+    align-self:center;
+    margin-right:2em;
+}
+.nav > li{
+    display:inline-block;
+    margin-left:1em;
+    margin-right:1em;
+}
+.nav > li > a{
+    font-family:"Space Mono";
+    font-size:1.1em;
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+}
+.nav > li > a:hover{
+    font-size: 1.2rem;
+    transition:font-size 0.25s ease-in;
+
+}
+.contact{
+    border:1px solid;
+    border-radius:5px;
+    box-sizing:border-box;
+    padding:7px;
+    background:linear-gradient(135deg,rgb(237, 9, 81), rgb(255, 133, 52),rgb(196, 0, 210));
+    
+}
+.contact:hover{
+font-size:1.2rem;
+transition:font-size 0.25s ease-in;   
+}
+
+.hero-section{
+    display:grid;
+    grid-template:100vh / 5rem 1fr 1fr 5rem;
+    background-color:#343434;
+}
+.hero-text{
+    grid-column:2;
+    color:rgb(255, 133, 52);
+    font-weight:bold;
+    font-size:5em;
+    font-family:"inlanders";
+    align-self:center;
+}
+.hero-text:hover{
+    font-size:5.2em;
+    transition:font-size 0.25s ease-in;
+}
+.hero-img-container{
+    grid-column:3;
+    align-self:center;
+}
+.hero-img-container > img{
+    object-fit:scale-down;
+    max-height:99vh;
+    max-width:50vw;
+    align-self:center;
+}
+.hero-img-container > img:hover{
+    max-width:52vw;
+    transition:max-width 0.25s ease-in;
+}
+.offers-section{
+    display:grid;
+    grid-template:20vh 80vh / 10rem 1fr 1fr 10rem;
+    background-color:#2b2b2b;
+    grid-auto-flow: row;
+}
+.offers-text{
+    font-size:3em;
+    grid-row:1;
+    grid-column:2 / span2;
+    justify-content:center;
+    font-family:"inlanders";
+    color:rgb(255, 133, 52);
+
+}
+.offers-img-container1{
+    grid-column:2;
+    grid-row:2;
+    align-self:center;
+    justify-self:center;
+}
+.offers-img-container2{
+    grid-column:3;
+    grid-row:2;
+    align-self:center;
+    justify-self:center;
+}
+.offers-img1{
+    max-height:80vh;
+    max-width:30vw;
+    height:30rem;
+    border:1px solid;
+    border-radius:30px;
+    background-color: rgba(255, 133, 52,0.1);
+}
+.offers-img2{
+    max-height:80vh;
+    max-width:30vw;
+    width:30rem;
+    height:30rem;
+    border:1px solid;
+    border-radius:30px;
+    background-color: rgba(255, 133, 52,0.1);
+}
+.offers-img1:hover{
+    background-color: rgba(255, 133, 52,0.3);
+    transition:background-color 0.25s ease-in;
+}
+.offers-img2:hover{
+    background-color: rgba(255, 133, 52,0.3);
+    transition:background-color 0.25s ease-in;
+}
+
+@media only screen and (max-width:720px){
+    @media only screen and (max-width: 720px) {
+        html{
+            font-size:8px;
+        }
+        .offers-img1,
+        .offers-img2 {
+            max-width: 100%; 
+            max-height: auto;
+            margin: 10px 0; 
+        }
+        .hero-img-container > img{
+            display:none;
+            opacity:0;
+        }
+        .offers-img-container1{
+            grid-row:3;
+        }
+        .offers-img-container2{
+            grid-column:2;
+        }
+        
+        header {
+            grid-template-columns: 1fr; 
+        }
+        .offers-section{
+            grid-template-columns:1fr;
+        }
+        .hero-section{
+            grid-template-columns:1fr;
+        }
+        .logo-text{
+            font-size:1em;
+        }
+    }
+}
